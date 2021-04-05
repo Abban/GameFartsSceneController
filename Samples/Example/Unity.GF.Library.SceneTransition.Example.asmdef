@@ -1,0 +1,16 @@
+{
+    "name": "Unity.GF.Library.SceneTransition.Example",
+    "rootNamespace": "",
+    "references": [
+        "Unity.GF.Library.SceneTransition"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

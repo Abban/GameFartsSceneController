@@ -1,0 +1,11 @@
+{
+    "name": "Unity.GF.Library.SceneTransition.Tests",
+    "references": [
+        "Unity.GF.Library.SceneTransition"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
