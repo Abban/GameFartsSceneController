@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
     public interface ISceneTransition
     {

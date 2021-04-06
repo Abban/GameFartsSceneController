@@ -1,5 +1,5 @@
 {
-    "name": "Unity.GF.Library.SceneTransition",
+    "name": "Unity.GF.Library.SceneController",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [],

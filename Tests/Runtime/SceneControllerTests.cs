@@ -1,21 +1,21 @@
 using System.Collections;
-using GF.Library.SceneTransition.TestResources;
+using GF.Library.SceneController.TestResources;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-namespace GF.Library.SceneTransition.Tests
+namespace GF.Library.SceneController.Tests
 {
-    public class SceneTransitionControllerTests
+    public class SceneControllerTests
     {
-        private TransitionControllerTestScenes _testScenes;
+        private SceneControllerTestScenes _testScenes;
         private MockSceneTransition _transition;
 
         [SetUp]
         public void SetUp()
         {
-            _testScenes = Resources.Load<TransitionControllerTestScenes>(nameof(TransitionControllerTestScenes));
+            _testScenes = Resources.Load<SceneControllerTestScenes>(nameof(SceneControllerTestScenes));
             _transition = new MockSceneTransition();
         }
         
@@ -25,7 +25,7 @@ namespace GF.Library.SceneTransition.Tests
         {
             var sceneToLoad = _testScenes.ReloadableTestScene;
             var loadedScene = string.Empty;
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
 
             SceneManager.sceneLoaded += (scene, mode) => loadedScene = scene.name;
 
@@ -40,7 +40,7 @@ namespace GF.Library.SceneTransition.Tests
         {
             var sceneToLoad = _testScenes.ReloadableTestScene;
             ISceneReference loadedScene = null;
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
 
             sceneController.SceneChanged += scene => loadedScene = scene;
 
@@ -55,7 +55,7 @@ namespace GF.Library.SceneTransition.Tests
         {
             var sceneThatDoesNotReload = _testScenes.DefaultTestScene;
             var counter = 0;
-            var sceneController = new SceneTransitionController(_transition, sceneThatDoesNotReload);
+            var sceneController = new SceneController(_transition, sceneThatDoesNotReload);
             
             sceneController.SceneChanged += scene => counter++;
             SceneManager.sceneLoaded += (scene, mode) => counter++;
@@ -71,7 +71,7 @@ namespace GF.Library.SceneTransition.Tests
         {
             var reloadableScene = _testScenes.ReloadableTestScene;
             var counter = 0;
-            var sceneController = new SceneTransitionController(_transition, reloadableScene);
+            var sceneController = new SceneController(_transition, reloadableScene);
             
             sceneController.SceneChanged += scene => counter++;
             SceneManager.sceneLoaded += (scene, mode) => counter++;
@@ -85,7 +85,7 @@ namespace GF.Library.SceneTransition.Tests
         [UnityTest]
         public IEnumerator OnLoadSceneWithTransitionShowOnly_ShowsTransition()
         {
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
             
             yield return sceneController.LoadScene(_testScenes.ReloadableTestScene, TransitionType.ShowOnly);
 
@@ -96,7 +96,7 @@ namespace GF.Library.SceneTransition.Tests
         [UnityTest]
         public IEnumerator OnHideTransition_HidesTransition()
         {
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
             
             yield return sceneController.LoadScene(_testScenes.ReloadableTestScene, TransitionType.ShowOnly);
             yield return sceneController.HideTransition();
@@ -108,7 +108,7 @@ namespace GF.Library.SceneTransition.Tests
         [UnityTest]
         public IEnumerator OnLoadSceneWithTransitionShowAndHide_ShowsAndHidesTransition()
         {
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
             
             yield return sceneController.LoadScene(_testScenes.ReloadableTestScene, TransitionType.ShowAndHide);
 
@@ -120,7 +120,7 @@ namespace GF.Library.SceneTransition.Tests
         [UnityTest]
         public IEnumerator OnLoadSceneWithTransitionNone_DoesNotShowHideTransition()
         {
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
             
             yield return sceneController.LoadScene(_testScenes.ReloadableTestScene, TransitionType.None);
 
@@ -133,7 +133,7 @@ namespace GF.Library.SceneTransition.Tests
         public IEnumerator OnLoadScene_CallsLoadingStateChangedActionWithCorrectStates()
         {
             var loadingState = LoadingState.Idle;
-            var sceneController = new SceneTransitionController(_transition, _testScenes.DefaultTestScene);
+            var sceneController = new SceneController(_transition, _testScenes.DefaultTestScene);
 
             sceneController.LoadingStateChanged += state => loadingState = state;
 

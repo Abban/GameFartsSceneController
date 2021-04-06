@@ -1,4 +1,4 @@
-﻿using GF.Library.SceneTransition;
+﻿using GF.Library.SceneController;
 using UnityEngine;
 
 namespace GF.SceneTransition.Example
@@ -9,21 +9,21 @@ namespace GF.SceneTransition.Example
         [SerializeField] private SceneReference scene1 = null;
         [SerializeField] private SceneReference scene2 = null;
 
-        private ISceneTransitionController _sceneTransitionController;
+        private ISceneController _sceneController;
 
 
         private void Awake()
         {
-            _sceneTransitionController = new SceneTransitionController(sceneTransition, scene1);
-            _sceneTransitionController.SceneChanged += OnSceneChanged;
-            _sceneTransitionController.LoadingStateChanged += OnLoadingStateChanged;
+            _sceneController = new SceneController(sceneTransition, scene1);
+            _sceneController.SceneChanged += OnSceneChanged;
+            _sceneController.LoadingStateChanged += OnLoadingStateChanged;
         }
 
         
         private void OnDisable()
         {
-            _sceneTransitionController.SceneChanged -= OnSceneChanged;
-            _sceneTransitionController.LoadingStateChanged -= OnLoadingStateChanged;
+            _sceneController.SceneChanged -= OnSceneChanged;
+            _sceneController.LoadingStateChanged -= OnLoadingStateChanged;
         }
 
         
@@ -35,13 +35,13 @@ namespace GF.SceneTransition.Example
 
         public void LoadScene1()
         {
-            StartCoroutine(_sceneTransitionController.LoadScene(scene1, TransitionType.ShowAndHide));
+            StartCoroutine(_sceneController.LoadScene(scene1, TransitionType.ShowAndHide));
         }
         
         
         public void LoadScene2()
         {
-            StartCoroutine(_sceneTransitionController.LoadScene(scene2, TransitionType.ShowAndHide));
+            StartCoroutine(_sceneController.LoadScene(scene2, TransitionType.ShowAndHide));
         }
 
 

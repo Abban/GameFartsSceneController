@@ -1,8 +1,8 @@
 using System;
 
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
-    public interface ISceneTransitionState
+    public interface ISceneState
     {
         ISceneReference CurrentScene { get; }
         LoadingState LoadingState { get; }

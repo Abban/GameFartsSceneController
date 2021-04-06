@@ -3,15 +3,15 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
-    public class SceneTransitionController : ISceneTransitionController
+    public class SceneController : ISceneController
     {
         private readonly ISceneTransition _transition;
         private ISceneReference _currentScene;
         private LoadingState _loadingState;
 
-        public SceneTransitionController(
+        public SceneController(
             ISceneTransition transition,
             ISceneReference startScene)
         {

@@ -1,8 +1,8 @@
 {
-  "name": "com.gamefarts.library.scenetransition",
+  "name": "com.gamefarts.library.scenecontroller",
   "version": "0.0.1",
-  "displayName": "Game Farts SceneTransition",
-  "description": "A module to handle Scene Transitions",
+  "displayName": "Game Farts SceneController",
+  "description": "A module to handle navigating between scenes",
   "unity": "2019.1",
   "author": {
     "name": "Abban Dunne",
@@ -11,7 +11,7 @@
   "samples": [
     {
       "displayName": "Example",
-      "description": "Example for using the Scene Transition Package",
+      "description": "Example for using the Scene Controller",
       "path": "Samples~/Example"
     }
   ],

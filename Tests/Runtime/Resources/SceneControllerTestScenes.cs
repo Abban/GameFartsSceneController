@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace GF.Library.SceneTransition.TestResources
+namespace GF.Library.SceneController.TestResources
 {
-    // [CreateAssetMenu(fileName = "TestScenes", menuName = "GF/Scene Transition/Test Scenes")]
-    public class TransitionControllerTestScenes : ScriptableObject
+    // [CreateAssetMenu(fileName = "TestScenes", menuName = "GF/Scene Controller/Test Scenes")]
+    public class SceneControllerTestScenes : ScriptableObject
     {
         [SerializeField] private SceneReference defaultTestScene = null;
         [SerializeField] private SceneReference reloadableTestScene = null;

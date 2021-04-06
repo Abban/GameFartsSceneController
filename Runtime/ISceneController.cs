@@ -1,8 +1,8 @@
 using System.Collections;
 
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
-    public interface ISceneTransitionController : ISceneTransitionState
+    public interface ISceneController : ISceneState
     {
         IEnumerator LoadScene(ISceneReference scene, TransitionType transitionType = TransitionType.None);
         IEnumerator HideTransition();

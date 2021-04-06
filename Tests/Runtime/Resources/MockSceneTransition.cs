@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace GF.Library.SceneTransition.TestResources
+namespace GF.Library.SceneController.TestResources
 {
     public class MockSceneTransition : ISceneTransition
     {

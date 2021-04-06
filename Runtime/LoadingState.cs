@@ -1,4 +1,4 @@
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
     public enum LoadingState
     {

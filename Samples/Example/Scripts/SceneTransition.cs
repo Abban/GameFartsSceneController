@@ -1,5 +1,5 @@
 using System.Collections;
-using GF.Library.SceneTransition;
+using GF.Library.SceneController;
 using UnityEngine;
 
 namespace GF.SceneTransition.Example

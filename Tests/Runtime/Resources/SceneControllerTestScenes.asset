@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e9f8375bf143c68284f618e2313732, type: 3}
-  m_Name: TransitionControllerTestScenes
+  m_Name: SceneControllerTestScenes
   m_EditorClassIdentifier: 
   defaultTestScene: {fileID: 11400000, guid: ef1f9d553b1bf4946951d5cdcdc5dab7, type: 2}
   reloadableTestScene: {fileID: 11400000, guid: d4c9e14ce8e37284e9fd6fb84888e44d, type: 2}

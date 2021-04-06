@@ -1,7 +1,7 @@
 {
-    "name": "Unity.GF.Library.SceneTransition.Tests",
+    "name": "Unity.GF.Library.SceneController.Tests",
     "references": [
-        "Unity.GF.Library.SceneTransition"
+        "Unity.GF.Library.SceneController"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"

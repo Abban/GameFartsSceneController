@@ -1,9 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace GF.Library.SceneTransition
+namespace GF.Library.SceneController
 {
-    [CreateAssetMenu(fileName = "SceneReference", menuName = "GF/Scene Transition/Scene Reference")]
+    [CreateAssetMenu(fileName = "SceneReference", menuName = "GF/Scene Controller/Scene Reference")]
     public class SceneReference : ScriptableObject, ISceneReference
     {
 #if UNITY_EDITOR

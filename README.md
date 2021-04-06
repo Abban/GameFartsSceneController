@@ -1,3 +1,3 @@
-# Game Farts Scene Transition
+# Game Farts Scene Controller
 
 Readme incoming

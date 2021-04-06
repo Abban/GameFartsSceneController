@@ -1,8 +1,8 @@
 {
-    "name": "Unity.GF.Library.SceneTransition.Example",
+    "name": "Unity.GF.Library.SceneController.Example",
     "rootNamespace": "",
     "references": [
-        "Unity.GF.Library.SceneTransition"
+        "Unity.GF.Library.SceneController"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
